@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 16:53:21 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/13 15:58:19 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/12 15:10:52 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/09/13 16:36:28 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdio.h>
-# include <stdlib.h>
-
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-
-#endif
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
+}
+/*
+int	main(void)
+{
+	printf("%d\n", ft_isascii('^'));
+	return (0);
+}
+*/

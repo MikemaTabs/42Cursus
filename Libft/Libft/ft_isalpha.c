@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 15:41:25 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/11 16:48:25 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/13 16:36:20 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,10 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
+/*
+int	main(void)
+{
+	printf("%d\n", ft_isalpha('a'));
+	return (0);
+}
+*/

@@ -1,6 +1,8 @@
 NAME = libft.a
 
 SRCS = ft_isalpha.c \
+			ft_isdigit.c \
+			ft_isalnum.c \
 
 OBJ = $(SRCS:.c=.o)
 OBJ_BONUS = $(SOURCE_BONUS:.c=.o)

@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 16:53:21 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/13 15:58:19 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/13 14:43:51 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/09/13 16:38:23 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdio.h>
-# include <stdlib.h>
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, 0, n);
+}
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-
-#endif
+int	main(void)
+{
+	printf("%d\n", ft_bzero())
+}
