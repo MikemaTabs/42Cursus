@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:24:06 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/15 15:10:02 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/15 15:31:05 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-	aaa
+	aaaa
 }
