@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:43:51 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/13 23:27:12 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/15 16:57:43 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	ft_bzero(void *s, size_t n)
 /*
 int	main(void)
 {
-	printf("%d\n", ft_bzero())
+	char str[] = "hola";
+	printf("%d\n", ft_bzero(str, 2));
+	return (0);
 }
 */
