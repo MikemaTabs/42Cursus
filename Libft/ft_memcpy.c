@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 15:41:25 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/13 16:36:20 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/14 15:24:06 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/09/15 15:10:02 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	aaa
 }
-/*
-int	main(void)
-{
-	printf("%d\n", ft_isalpha('a'));
-	return (0);
-}
-*/
