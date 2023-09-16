@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:24:06 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/15 16:52:22 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/16 20:03:51 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 	
 }
 
-
+/*
 int	main(void)
 {
 	char dest[] = "123456";
@@ -36,3 +36,4 @@ int	main(void)
 	printf("%s\n", ft_memcpy(dest, src, 3));
 	return (0);
 }
+*/
