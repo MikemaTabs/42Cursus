@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:24:06 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/17 19:15:20 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/17 19:16:09 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		*((unsigned char *)(dest + i)) = *((unsigned char *)(src + i));
 		i++;
 	}
-	return (dest);	
+	return (dest);
 }
 /*
 int	main(void)

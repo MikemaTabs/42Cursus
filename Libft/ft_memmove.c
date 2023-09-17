@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 20:12:25 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/17 19:05:16 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/17 19:54:51 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 /*
-int	main(void)
+int main(void)
 {
-	char src[] = "hola me llamo miguel";
-	char dest[] = "eeeeee";
-	printf ("%p\n", ft_memmove(dest, src, 4));
-	return (0);
+	char src[] = "Hola Mundo";
+	char dest[]= "aaaa Infierno";
+	ft_memmove(dest, src, 4);
+	printf("Source: %s\n", src);
+	printf("Destiny: %s\n", dest);
+	return 0;
 }
 */
