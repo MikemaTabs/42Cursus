@@ -1,44 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 20:12:57 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/18 18:11:43 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/18 18:27:57 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/09/18 18:43:36 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int	ft_toupper(int c)
 {
-	size_t	srclen;
-	size_t	i;
-
-	i = 0;
-	srclen = ft_strlen((char *) src);
-	if (size)
-	{
-		while (src[i] && i < size - 1)
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
-	}
-	return (srclen);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }
 /*
 int main(void)
 {
-	size_t i;
-	char src[] = "adios";
-	char dst[] = "";
-	i = ft_strlcpy(dst, src, 4);
-	printf("source: %ld\n", i);
-	printf("destiny: %s\n", dst);
+	printf("%d", ft_toupper('a'));
 	return (0);
 }
 */
