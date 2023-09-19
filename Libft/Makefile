@@ -14,6 +14,15 @@ SRCS = ft_isalpha.c \
 			ft_strlcat.c \
 			ft_toupper.c \
 			ft_tolower.c \
+			ft_strchr.c \
+			ft_strrchr.c \
+			ft_strncmp.c \
+			ft_memchr.c \
+			ft_memcmp.c \
+			ft_strnstr.c \
+			ft_atoi.c \
+			ft_calloc.c \
+			ft_strdup.c \
 
 OBJ = $(SRCS:.c=.o)
 OBJ_BONUS = $(SOURCE_BONUS:.c=.o)

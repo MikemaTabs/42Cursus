@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 15:24:06 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/20 00:57:25 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/20 00:04:23 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/09/20 00:08:25 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	unsigned char	*x;
+	unsigned char	*y;
+	size_t			i;
 
-	if (!src && !dest)
-		return (0);
 	i = 0;
+	x = (unsigned char *)s1;
+	y = (unsigned char *)s2;
+	if (!n)
+		return (0);
 	while (i < n)
 	{
-		*((unsigned char *)(dest + i)) = *((unsigned char *)(src + i));
+		if (x[i] != y[i])
+			return (x[i] - y[i]);
 		i++;
 	}
-	return (dest);
-}
-/*
-int	main(void)
-{
-	char dest[] = "123456";
-	char src[] = "zxcvbn";
-	printf("%s\n", ft_memcpy(dest, src, 3));
 	return (0);
 }
-*/

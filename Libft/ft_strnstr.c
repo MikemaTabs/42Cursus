@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 15:24:06 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/20 00:57:25 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/20 00:07:21 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/09/20 00:11:02 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
+	size_t	nlen;
 
-	if (!src && !dest)
-		return (0);
+	if (*little == 0)
+		return ((char *) big);
 	i = 0;
-	while (i < n)
+	nlen = ft_strlen(little);
+	while (i < len && big[i])
 	{
-		*((unsigned char *)(dest + i)) = *((unsigned char *)(src + i));
+		if (big[i] == *little && len - i >= nlen
+			&& ft_strncmp(&big[i], little, nlen) == 0)
+			return ((char *) &big[i]);
 		i++;
 	}
-	return (dest);
+	return (NULL);
 }
-/*
-int	main(void)
-{
-	char dest[] = "123456";
-	char src[] = "zxcvbn";
-	printf("%s\n", ft_memcpy(dest, src, 3));
-	return (0);
-}
-*/

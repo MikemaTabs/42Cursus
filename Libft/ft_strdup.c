@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 15:24:06 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/20 00:57:25 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/20 00:17:44 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/09/20 00:19:38 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strdup(const char *s)
 {
-	size_t	i;
+	char	*copy;
+	size_t	s_len;
+	int		i;
 
-	if (!src && !dest)
-		return (0);
 	i = 0;
-	while (i < n)
+	s_len = ft_strlen(s);
+	copy = malloc(sizeof(char) * (s_len + 1));
+	if (!copy)
+		return (NULL);
+	while (s[i])
 	{
-		*((unsigned char *)(dest + i)) = *((unsigned char *)(src + i));
+		copy[i] = s[i];
 		i++;
 	}
-	return (dest);
+	copy[i] = '\0';
+	return (copy);
 }
-/*
-int	main(void)
-{
-	char dest[] = "123456";
-	char src[] = "zxcvbn";
-	printf("%s\n", ft_memcpy(dest, src, 3));
-	return (0);
-}
-*/

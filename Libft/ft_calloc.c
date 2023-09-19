@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 15:24:06 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/20 00:57:25 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/20 00:15:07 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/09/20 00:17:24 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
+	void	*res;
 
-	if (!src && !dest)
+	res = malloc(size * nmemb);
+	if (!res)
 		return (0);
-	i = 0;
-	while (i < n)
-	{
-		*((unsigned char *)(dest + i)) = *((unsigned char *)(src + i));
-		i++;
-	}
-	return (dest);
+	ft_bzero(res, size * nmemb);
+	return (res);
 }
-/*
-int	main(void)
-{
-	char dest[] = "123456";
-	char src[] = "zxcvbn";
-	printf("%s\n", ft_memcpy(dest, src, 3));
-	return (0);
-}
-*/

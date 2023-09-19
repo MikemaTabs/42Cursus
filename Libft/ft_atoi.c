@@ -1,37 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 15:24:06 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/20 00:57:25 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/20 00:11:18 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/09/20 00:14:31 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+static int	ft_isspace(char c)
 {
-	size_t	i;
-
-	if (!src && !dest)
-		return (0);
-	i = 0;
-	while (i < n)
-	{
-		*((unsigned char *)(dest + i)) = *((unsigned char *)(src + i));
-		i++;
-	}
-	return (dest);
-}
-/*
-int	main(void)
-{
-	char dest[] = "123456";
-	char src[] = "zxcvbn";
-	printf("%s\n", ft_memcpy(dest, src, 3));
+	if (c == ' ' || c == '\t' || c == '\v'
+		|| c == '\r' || c == '\f' || c == '\n')
+		return (1);
 	return (0);
 }
-*/
+
+int	ft_atoi(const char *nptr)
+{
+	int	res;
+	int	sign;
+	int	i;
+
+	i = 0;
+	sign = 1;
+	res = 0;
+	while (ft_isspace(nptr[i]))
+		i++;
+	if (nptr[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	else if (nptr[i] == '+')
+		i++;
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+		res = (res * 10) + (nptr[i++] - '0');
+	return (res * sign);
+}
