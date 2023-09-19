@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 15:16:54 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/13 16:36:53 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/19 15:33:15 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	z;
+	size_t	i;
 
-	z = 0;
-	while (s[z])
-		z++;
-	return (z);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
 /*
 int	main(void)

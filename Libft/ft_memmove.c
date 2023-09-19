@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 20:12:25 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/17 20:02:55 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/19 15:26:29 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 int main(void)
 {
 	char src[] = "Hola Mundo";
-	char dest[]= "aaaa Infierno";
+	char dest[]= "aaaa infierno";
 	ft_memmove(dest, src, 4);
 	printf("Source: %s\n", src);
 	printf("Destiny: %s\n", dest);

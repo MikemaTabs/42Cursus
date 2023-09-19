@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 15:24:06 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/19 15:23:22 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/19 14:20:37 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/09/19 15:30:38 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int		i;
 
-	if (!src && !dest)
-		return (0);
-	i = 0;
-	while (i < n)
+	i = ft_strlen(s);
+	if (c == 0)
+		return ((char *)s + i);
+	while (i >= 0)
 	{
-		*((unsigned char *)(dest + i)) = *((unsigned char *)(src + i));
-		i++;
+		if (s[i] == c)
+			return ((char *)s + i);
+		i--;
 	}
-	return (dest);
+	return (NULL);
 }
 /*
-int	main(void)
+int main(void)
 {
-	char dest[] = "123456";
-	char src[] = "zxcvbn";
-	printf("%s\n", ft_memcpy(dest, src, 3));
+	char	i[] = "hola me llamo miguel";
+	printf("%s\n", ft_strrchr(i, 'm'));
 	return (0);
 }
 */
