@@ -8,11 +8,9 @@
 			"type": "lldb",
 			"request": "launch",
 			"name": "Debug",
-			"program": "/home/mikema/Desktop/42Cursus/Libft
-			/a.out",
+			"program": "/Users/fbascuna/Desktop/42Cursus/Libft/a.out",
 			"args": *.c,
-			"cwd": "/home/mikema/Desktop/42Cursus/Libft
-			"
+			"cwd": "${workspaceFolder}"
 		}
 	]
 }
