@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 00:11:18 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/20 00:14:31 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:40:52 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,3 +42,10 @@ int	ft_atoi(const char *nptr)
 		res = (res * 10) + (nptr[i++] - '0');
 	return (res * sign);
 }
+/* 
+int	main(void)
+{
+	printf("%d", ft_atoi("1234hola"));
+	return (0);
+}
+ */

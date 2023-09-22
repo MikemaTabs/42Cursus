@@ -6,35 +6,36 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 00:07:21 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/22 14:39:57 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:35:34 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	nlen;
 
-	if (*little == 0)
-		return ((char *) big);
+	if (*needle == 0)
+		return ((char *) haystack);
 	i = 0;
-	nlen = ft_strlen(little);
-	while (i < len && big[i])
+	nlen = ft_strlen(needle);
+	while (i < len && haystack[i])
 	{
-		if (big[i] == *little && len - i >= nlen
-			&& ft_strncmp(&big[i], little, nlen) == 0)
-			return ((char *) &big[i]);
+		if (haystack[i] == *needle && len - i >= nlen
+			&& ft_strncmp(&haystack[i], needle, nlen) == 0)
+			return ((char *) &haystack[i]);
 		i++;
 	}
 	return (NULL);
 }
-
+/* 
 int	main(void)
 {
-	char big[] = "";
-	char little[] = "";
-	printf("%s", ft_strnstr(big, little, 3));
+	char haystack[] = "xxxxholaxxxx";
+	char needle[] = "hola";
+	printf("%s\n", ft_strnstr(haystack, needle, 12));
 	return (0);
 }
+ */

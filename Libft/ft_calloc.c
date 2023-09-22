@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 00:15:07 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/20 00:17:24 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:41:45 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (0);
 	ft_bzero(res, size * nmemb);
 	return (res);
+}
+
+int	main(void)
+{
+	
 }
