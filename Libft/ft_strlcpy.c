@@ -6,22 +6,22 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 20:12:57 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/18 18:11:43 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/22 14:10:55 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	srclen;
 	size_t	i;
 
 	i = 0;
 	srclen = ft_strlen((char *) src);
-	if (size)
+	if (dstsize)
 	{
-		while (src[i] && i < size - 1)
+		while (src[i] && i < dstsize - 1)
 		{
 			dst[i] = src[i];
 			i++;
@@ -30,15 +30,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (srclen);
 }
-/*
-int main(void)
+/* 
+int	main(void)
 {
-	size_t i;
-	char src[] = "adios";
-	char dst[] = "";
-	i = ft_strlcpy(dst, src, 4);
-	printf("source: %ld\n", i);
-	printf("destiny: %s\n", dst);
+	char src[] = "aaaaaaaaaa";
+	char dst[] = "bbbbbbb";
+	printf("ft=%ld\n", ft_strlcpy(dst, src, 3));
+	printf("src=%s\n", src);
+	printf("dst=%s\n", dst);
 	return (0);
 }
-*/
+ */

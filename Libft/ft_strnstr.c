@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 00:07:21 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/20 00:11:02 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/22 14:39:57 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		i++;
 	}
 	return (NULL);
+}
+
+int	main(void)
+{
+	char big[] = "";
+	char little[] = "";
+	printf("%s", ft_strnstr(big, little, 3));
+	return (0);
 }

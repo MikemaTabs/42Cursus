@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 20:13:11 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/18 18:26:12 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/22 14:21:11 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[i + j] = '\0';
 	return (i + ft_strlen(src));
 }
-/*
-int main(void)
+/* 
+int	main(void)
 {
-	size_t i;
-	char src[] = "adios";
-	char dst[] = "hola";
-	i = ft_strlcat(dst, src, 4);
-	printf("source: %ld\n", i);
+	char src[] = "123456";
+	char dst[] = "zxcv";
+	printf("ft=%ld\n", ft_strlcat(dst, src, 4));
 	return (0);
 }
-*/
+ */

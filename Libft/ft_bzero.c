@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:43:51 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/20 15:38:34 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/21 17:09:36 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
-/*
+/* 
 int	main(void)
 {
 	char s[] = "123456";
@@ -25,4 +25,4 @@ int	main(void)
 	printf("\n");
 	return (0);
 }
-*/
+ */
