@@ -6,41 +6,34 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 00:11:18 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/22 16:40:52 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/26 16:43:40 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(char c)
+int	ft_atoi(const char *str)
 {
-	if (c == ' ' || c == '\t' || c == '\v'
-		|| c == '\r' || c == '\f' || c == '\n')
-		return (1);
-	return (0);
-}
-
-int	ft_atoi(const char *nptr)
-{
-	int	res;
+	int	cont;
+	int	num;
 	int	sign;
-	int	i;
 
-	i = 0;
+	cont = 0;
+	num = 0;
 	sign = 1;
-	res = 0;
-	while (ft_isspace(nptr[i]))
-		i++;
-	if (nptr[i] == '-')
+	while (str[cont] == 32 || (str[cont] > 8 && str[cont] < 14))
+		cont++;
+	if (str[cont] == '-')
+		sign = sign * -1;
+	if (str[cont] == '+' || str[cont] == '-')
+		cont++;
+	while (str[cont] >= '0' && str[cont] <= '9')
 	{
-		sign = -1;
-		i++;
+		num = (str[cont] - 48) + (num * 10);
+		cont++;
 	}
-	else if (nptr[i] == '+')
-		i++;
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-		res = (res * 10) + (nptr[i++] - '0');
-	return (res * sign);
+	num = num * sign;
+	return (num);
 }
 /* 
 int	main(void)
