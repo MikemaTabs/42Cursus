@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 20:12:57 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/22 14:10:55 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/27 16:31:04 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 /* 
 int	main(void)
 {
-	char src[] = "aaaaaaaaaa";
-	char dst[] = "bbbbbbb";
-	printf("ft=%ld\n", ft_strlcpy(dst, src, 3));
-	printf("src=%s\n", src);
-	printf("dst=%s\n", dst);
+	char src[] = "123456";
+	char dst[] = "zxcvbn";
+	printf("%ld\n", ft_strlcpy(dst, src, 4));
+	printf("%s\n", src);
+	printf("%s\n", dst);
 	return (0);
 }
  */

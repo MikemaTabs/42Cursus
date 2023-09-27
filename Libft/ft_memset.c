@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:10:16 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/21 16:55:57 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/27 15:07:46 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ void	*ft_memset(void *b, int c, size_t len)
 /* 
 int	main(void)
 {
-	char str[] = "123456";
-	printf("%s\n", ft_memset(str, 'z', 3));
+	char b[] = "123456";
+	char *p = ft_memset(b, 'z', 3);
+	printf("%s", p);
 	return (0);
 }
  */
