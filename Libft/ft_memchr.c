@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 16:27:38 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/22 14:27:09 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/28 01:52:33 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ void	*ft_memchr(const void *str, int c, size_t n)
 int	main(void)
 {
 	char str[] = "me llamo juan";
-	printf("%s", ft_memchr(str, 'j', 20));
+	char *p = ft_memchr(str, 'j', 10);
+	printf("%s", p);
 	return (0);
 }
  */

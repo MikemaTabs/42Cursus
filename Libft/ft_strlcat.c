@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 20:13:11 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/27 17:15:37 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/09/27 21:48:45 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(void)
 {
 	char src[] = "123456";
 	char dst[] = "zxcvbn";
-	printf("%ld\n", ft_strlcat(dst, src, 4));
+	printf("%ld\n", ft_strlcat(dst, src, 3));
 	return (0);
 }
  */
