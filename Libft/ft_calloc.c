@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 00:15:07 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/25 15:52:17 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/10/02 17:30:37 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(void)
 	int i = 0;
 	ptr = (int*) ft_calloc(3, 3);
 	while (i++ < 3)
-		printf("%d", ptr[i]);
+		printf("%d\n", ptr[i]);
 	return (0);
 }
  */

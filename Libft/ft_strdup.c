@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 00:17:44 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/26 16:41:26 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/10/02 17:43:26 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ char	*ft_strdup(const char *s1)
 /* 
 int main(void)
 {
-	char s[] = "hola";
-	char *i = ft_strdup(s);
-	printf("%s", i);
+	char dup[] = "hola";
+	char *i = ft_strdup(dup);
+	printf("%s\n", i);
 	return (0);
 }
  */
