@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 12:54:18 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/26 16:48:21 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/10/02 17:55:25 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
-	size_t	tam;
+	size_t	size;
 
-	tam = ft_strlen(s);
-	if (tam <= start)
+	size = ft_strlen(s);
+	if (size <= start)
 		return (ft_strdup(""));
-	if (tam - start < len)
-		len = tam - start;
+	if (size - start < len)
+		len = size - start;
 	substr = (char *)malloc (len + 1);
 	if (!substr)
 		return (0);
