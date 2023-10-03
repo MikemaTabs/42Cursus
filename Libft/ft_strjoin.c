@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 13:37:35 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/09/26 16:38:27 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:13:46 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str3;
-	size_t	tam;
+	size_t	size;
 
 	if (!s1 || !s2)
 		return (0);
-	tam = ft_strlen(s1) + ft_strlen(s2);
-	str3 = (char *)malloc (tam + 1);
+	size = ft_strlen(s1) + ft_strlen(s2);
+	str3 = (char *)malloc (size + 1);
 	if (!str3)
 		return (0);
 	ft_memcpy(str3, s1, ft_strlen(s1));
