@@ -6,13 +6,13 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:58:09 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/10/04 18:12:26 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/10/05 17:36:44 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_dcount(long int n)
+static int	ft_dcont(long int n)
 {
 	int	i;
 
@@ -34,7 +34,7 @@ char	*ft_itoa(int n)
 	n_copy = n;
 	if (n_copy < 0)
 		n_copy *= -1;
-	n_len = ft_dcount(n_copy);
+	n_len = ft_dcont(n_copy);
 	if (n < 0)
 		n_len++;
 	str = malloc((n_len + 1) * sizeof(char));
@@ -50,3 +50,10 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
+/* 
+int	main(void)
+{
+	printf("%s\n", ft_itoa(-35));
+	return (0);
+}
+ */
