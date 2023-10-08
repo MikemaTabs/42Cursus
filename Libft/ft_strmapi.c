@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:02:16 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/10/08 16:00:42 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/10/08 16:46:10 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	while (s[cont])
 	{
 		str[cont] = f(cont, s[cont]);
-				cont++;
+		cont++;
 	}
 	str[cont] = '\0';
 	return (str);
