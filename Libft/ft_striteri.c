@@ -1,49 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 17:02:16 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/10/08 16:00:42 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/10/08 15:05:46 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/10/08 16:00:57 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int		cont;
-	char	*str;
+	int	cont;
 
 	if (!s || !f)
-		return (0);
-	cont = ft_strlen(s);
-	str = malloc((cont + 1) * sizeof(char));
-	if (!str)
-		return (0);
+		return ;
 	cont = 0;
 	while (s[cont])
 	{
-		str[cont] = f(cont, s[cont]);
-				cont++;
+		f(cont, s + cont);
+		cont++;
 	}
-	str[cont] = '\0';
-	return (str);
 }
 /* 
-char	ft_toupper_mod(unsigned int a, char c)
+void	ft_toupper_moo(unsigned int i, char *c)
 {
-	(void)a;
-	return(ft_toupper(c));
+	(void)i;
+	*c = ft_toupper(*c);
 }
 
 int main(void)
 {
-    char s[] = "Hola me llamo Miguel";
-    char *p = ft_strmapi(s, ft_toupper_mod);
-    printf("%s\n", p);
+	char s[] = "Hola me llamo Miguel";
+    ft_striteri(s, &ft_toupper_moo);
+	printf("%s\n", s);
     return (0);
 }
  */
