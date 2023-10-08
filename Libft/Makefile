@@ -28,6 +28,7 @@ SRCS = ft_isalpha.c \
 			ft_strtrim.c \
 			ft_itoa.c \
 			ft_strmapi.c \
+			ft_striteri.c \
 
 OBJ = $(SRCS:.c=.o)
 OBJ_BONUS = $(SOURCE_BONUS:.c=.o)
