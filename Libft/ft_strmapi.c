@@ -6,11 +6,17 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:02:16 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/10/07 17:27:28 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/10/08 15:00:16 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char ft_toupper_mod(unsigned int a, char c)
+{
+	(void)a;
+	return(ft_toupper(c));
+}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -32,12 +38,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[cont] = '\0';
 	return (str);
 }
-
+/* 
 int main(void)
 {
-    char input[] = "hola";
-	int i = 'h';
-    char *result = ft_strmapi(input, ft_toupper(i));
-    printf("%s\n", result);
+    char s[] = "Hola me llamo Miguel";
+    char *p = ft_strmapi(s, ft_toupper_mod);
+    printf("%s\n", p);
     return (0);
 }
+ */
