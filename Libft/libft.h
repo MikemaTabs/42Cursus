@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 16:53:21 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/10/08 16:43:43 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:20:47 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int nb, int fd);
+char	**ft_split(char const *s, char c);
 
 #endif
