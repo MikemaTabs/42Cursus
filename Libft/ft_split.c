@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:20:18 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/10/09 15:52:41 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/10/11 16:34:05 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,19 +82,17 @@ int	main(void)
 {
     char	str[] = "Hola. prueba de split";
     char	**words;
-    int		i;
+    int		i = 0;
     
     words = ft_split(str, ' ');
     if (words == NULL)
         return (1);
-    i = 0;
-    while (words[i] != NULL)
+    while (words[i])
     {
         printf("%s\n", words[i]);
         i++;
     }
     free(words);
-    
     return (0);
 }
  */
