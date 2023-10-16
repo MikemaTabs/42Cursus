@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:57:01 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/10/16 15:17:28 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/10/16 15:25:37 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	original_lst = lst;
 	new_list = NULL;
 	while (lst != NULL)
-	{	
+	{
 		new_content = f(lst->content);
 		if (new_content == NULL)
 			return (free_stuff(&new_content, &new_list, del));
