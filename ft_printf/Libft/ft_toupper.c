@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 12:46:42 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/10/30 16:30:53 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/18 18:27:57 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/09/20 15:44:44 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdarg.h>
-# include <stddef.h>
-# include <stdlib.h>
-# include "Libft/libft.h"
-
-int	ft_printf(const char *string, ...);
-void	ft_string(char *arg, int *len);
-
-#endif
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
+}
+/*
+int main(void)
+{
+	printf("%d", ft_toupper('a'));
+	return (0);
+}
+*/

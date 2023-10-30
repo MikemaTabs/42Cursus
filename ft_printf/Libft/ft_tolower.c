@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 12:46:42 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/10/30 16:30:53 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/18 18:41:20 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/09/18 19:02:55 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdarg.h>
-# include <stddef.h>
-# include <stdlib.h>
-# include "Libft/libft.h"
-
-int	ft_printf(const char *string, ...);
-void	ft_string(char *arg, int *len);
-
-#endif
+int	ft_tolower(int i)
+{
+	if (i >= 'A' && i <= 'Z')
+		return (i + 32);
+	return (i);
+}
+/*
+int main(void)
+{
+	printf("%d", ft_tolower('A'));
+	return (0);
+}
+*/

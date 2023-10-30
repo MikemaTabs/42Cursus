@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 12:46:42 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/10/30 16:30:53 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/19 16:27:38 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/09/28 01:52:33 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdarg.h>
-# include <stddef.h>
-# include <stdlib.h>
-# include "Libft/libft.h"
-
-int	ft_printf(const char *string, ...);
-void	ft_string(char *arg, int *len);
-
-#endif
+void	*ft_memchr(const void *str, int c, size_t n)
+{
+	while (n--)
+	{
+		if (*(unsigned char *)str == (unsigned char)c)
+			return ((void *)str);
+		str++;
+	}
+	return (0);
+}
+/* 
+int	main(void)
+{
+	char str[] = "me llamo juan";
+	char *p = ft_memchr(str, 'j', 10);
+	printf("%s", p);
+	return (0);
+}
+ */

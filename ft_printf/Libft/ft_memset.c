@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 12:46:42 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/10/30 16:30:53 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/20 15:10:16 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/09/27 15:07:46 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdarg.h>
-# include <stddef.h>
-# include <stdlib.h>
-# include "Libft/libft.h"
-
-int	ft_printf(const char *string, ...);
-void	ft_string(char *arg, int *len);
-
-#endif
+void	*ft_memset(void *b, int c, size_t len)
+{
+	while (len--)
+		*((unsigned char *)(b + len)) = (unsigned char) c;
+	return (b);
+}
+/* 
+int	main(void)
+{
+	char b[] = "123456";
+	char *p = ft_memset(b, 'z', 3);
+	printf("%s", p);
+	return (0);
+}
+ */

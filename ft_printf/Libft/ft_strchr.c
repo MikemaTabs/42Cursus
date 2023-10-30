@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 12:46:42 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/10/30 16:30:53 by fbascuna         ###   ########.fr       */
+/*   Created: 2023/09/18 19:00:56 by fbascuna          #+#    #+#             */
+/*   Updated: 2023/10/10 16:15:28 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdarg.h>
-# include <stddef.h>
-# include <stdlib.h>
-# include "Libft/libft.h"
-
-int	ft_printf(const char *string, ...);
-void	ft_string(char *arg, int *len);
-
-#endif
+char	*ft_strchr(const char *str, int c)
+{
+	if ((!*str && (char)c == '\0'))
+		return ((char *)str);
+	while (*str != '\0')
+	{
+		if (*str == (char) c)
+			return ((char *) str);
+		str++;
+		if (*str == (char) c)
+			return ((char *) str);
+	}
+	return (0);
+}
+/*
+int main(void)
+{
+	char i[] = "hola me llamo miguel";
+	printf("%s", ft_strchr(i, 'm'));
+	return (0);
+}
+*/
