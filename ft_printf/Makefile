@@ -1,33 +1,33 @@
 NAME	= libftprintf.a
 
-SRCS	=	ft_word.c \
-			ft_printf.c \
+LIBFT = Libft/libft.a
+
+SRCS_PATH = ./Printf
+
+SRCS	= $(SRCS_PATH)/ft_printf.c \
 
 OBJ = $(SRCS:.c=.o)
 
 CC = gcc
 
-RM = rm -f
-
 CFLAGS = -Wall -Wextra -Werror
 
-LIBFT = Libft/libft.a
+RM = rm -f
 
 all: $(NAME)
 
 $(NAME): $(OBJ) $(LIBFT)
-	$(CC) $(CFLAGS) -o $(SRCS) $(NAME) $(LIBFT)
+	$(CC) $(CFLAGS) -o $(OBJ) $(NAME) $(LIBFT)
 
 $(OBJ): $(SRCS)
 	$(CC) $(CFLAGS) -c $(SRCS)
 
 $(LIBFT):
 	make -C Libft
-	mv Libft/libft.a libft.a
 
 clean:
 	$(RM) $(OBJ) $(LIBFT)
-	make -C Libft clean
+	make -C Libft fclean
 
 fclean: clean
 	$(RM) $(NAME)
