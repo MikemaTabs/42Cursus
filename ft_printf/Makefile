@@ -4,7 +4,10 @@ LIBFT = Libft/libft.a
 
 SRCS_PATH = ./Printf
 
-SRCS	= $(SRCS_PATH)/ft_printf.c \
+SRCS	=	$(SRCS_PATH)/ft_printf.c \
+			$(SRCS_PATH)/ft_arg_c.c \
+			$(SRCS_PATH)/ft_arg_perc.c \
+			$(SRCS_PATH)/ft_arg_s.c \
 
 OBJ = $(SRCS:.c=.o)
 
