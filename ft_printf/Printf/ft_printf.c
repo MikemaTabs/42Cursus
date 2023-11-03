@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 12:54:57 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/11/03 17:22:46 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/11/03 19:07:00 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,28 @@ static int	ft_printf_check(va_list arg, char c)
 		bytes += ft_arg_d_i(va_arg(arg, int));
 }
 
-int	ft_printf(const char *string, ...)
+int	ft_printf(const char *str, ...)
 {
-	
+	va_list	arg;
+	int		i;
+	int		bytes;
+	char	c;
+
+	i = 0;
+	bytes = 0;
+	va_start(arg, str);
+	while(str[i])
+	{
+		c = str[i + 1];
+		if (str[i] == '%')
+		{
+			bytes += ft_printf_check(arg, c);
+			i++;
+		}
+		else
+			bytes += write(1, &str[i], sizeof(char));
+		i++;
+	}
+	va_end(arg);
+	return (bytes);
 }
