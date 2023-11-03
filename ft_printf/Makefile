@@ -8,6 +8,8 @@ SRCS	=	$(SRCS_PATH)/ft_printf.c \
 			$(SRCS_PATH)/ft_arg_c.c \
 			$(SRCS_PATH)/ft_arg_perc.c \
 			$(SRCS_PATH)/ft_arg_s.c \
+			$(SRCS_PATH)/ft_arg_d_i.c \
+			$(SRCS_PATH)/ft_arg_u.c \
 
 OBJ = $(SRCS:.c=.o)
 
