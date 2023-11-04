@@ -10,6 +10,7 @@ SRCS	=	$(SRCS_PATH)/ft_printf.c \
 			$(SRCS_PATH)/ft_arg_s.c \
 			$(SRCS_PATH)/ft_arg_d_i.c \
 			$(SRCS_PATH)/ft_arg_u.c \
+			$(SRCS_PATH)/ft_free_ptr.c \
 
 OBJ = $(SRCS:.c=.o)
 
