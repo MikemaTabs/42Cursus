@@ -1,4 +1,4 @@
-NAME	= libftprintf.a
+NAME = libftprintf.a
 
 LIBFT = Libft/libft.a
 

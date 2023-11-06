@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 12:57:16 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/11/06 13:06:26 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/11/06 16:15:42 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_arg_p(unsigned long nbr)
 		return (write(1, "(null)", sizeof(char) * 6));
 	bytes = write(1, "0x", sizeof(char) * 2);
 	num = (char *)malloc(((ft_hex_len(nbr)) + 1) * sizeof(char));
-	while(nbr)
+	while (nbr)
 	{
 		num[i] = ft_decimal_to_hex(nbr % 16, 'x');
 		nbr /= 16;

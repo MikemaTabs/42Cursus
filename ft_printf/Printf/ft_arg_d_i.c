@@ -6,37 +6,33 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:37:34 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/11/03 17:04:31 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/11/06 19:05:59 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	ft_putnbr(int n)
+static void	ft_putnbr(int nbr)
 {
-	if (n == -2147483648)
+	int	sum;
+
+	sum = 0;
+	if (nbr < 0)
 	{
-		if (ft_putchar_fd() < 0 || ft_putchar_fd() < 0)
-			return (-1);
-		ft_putchar_fd('-', 1);
-		ft_putchar_fd('2', 1);
-		n = 147483648;
+		write(1, "-", 1);
+		nbr *= -1;
+		if (nbr == -2147483648)
+		{
+			nbr--;
+			sum = 1;
+		}
 	}
-	if (n < 0)
-	{
-		if (ft_putchar_fd() < 0)
-			return (-1);
-		ft_putchar_fd('-', 1);
-		n *= -1;
-	}
-	if (n >= 0 && n <= 9)
-		return (ft_putchar_fd(n + '0', 1));
+	if (nbr < 10)
+		ft_putchar_fd(nbr + 48 + sum, 1);
 	else
 	{
-		if (ft_putchar_fd() < 0 || ft_putchar_fd() < 0)
-			return (-1);
-		ft_putnbr_fd(n / 10, 1);
-		ft_putnbr_fd(n % 10, 1);
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10 + sum);
 	}
 }
 
