@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 12:46:42 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/11/06 12:50:26 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:08:20 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int		ft_decimal_len(long int nbr);
 int		ft_hex_len(unsigned long nbr);
 int		ft_reverse_str(char *str);
 char	ft_decimal_to_hex(char digit, char type);
+int		ft_arg_p(unsigned long nbr);
 
 #endif
