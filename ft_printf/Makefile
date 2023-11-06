@@ -11,6 +11,10 @@ SRCS	=	$(SRCS_PATH)/ft_printf.c \
 			$(SRCS_PATH)/ft_arg_d_i.c \
 			$(SRCS_PATH)/ft_arg_u.c \
 			$(SRCS_PATH)/ft_free_ptr.c \
+			$(SRCS_PATH)/ft_hex_len.c \
+			$(SRCS_PATH)/ft_decimal_len.c \
+			$(SRCS_PATH)/ft_decimal_to_hex.c \
+			$(SRCS_PATH)/ft_reverse_str.c \
 
 OBJ = $(SRCS:.c=.o)
 
