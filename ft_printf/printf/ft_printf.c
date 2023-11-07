@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 12:54:57 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/11/07 18:23:50 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/11/07 18:25:26 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ static int	ft_arg_check(va_list arg, char c)
 		bytes += ft_arg_u(va_arg(arg, int));
 	if (c == 'd' || c == 'i')
 		bytes += ft_arg_d_i(va_arg(arg, int));
-	if (c == 'x' || c == 'X')
-		bytes += ft_arg_x(va_arg(arg, unsigned int), c);
+//	if (c == 'x' || c == 'X')
+//		bytes += ft_arg_x(va_arg(arg, unsigned int), c);
 	return (bytes);
 }
 
