@@ -35,18 +35,18 @@ $(NAME):	$(OBJS) $(LIBFT)
 			ar -rcs $(NAME) $(OBJS)
 
 $(LIBFT):
-			make bonus -C Libft
+			make bonus -C libft
 			cp $(LIBFT) $(NAME)
 
 .c.o:
 			$(CC) -c ${FLAGS} $< -o ${<:.c=.o} ${INCLUDE}
 
 clean:
-			make clean -C Libft
+			make clean -C libft
 			$(REMOVE) $(OBJS)
 
 fclean:
-			make fclean -C Libft
+			make fclean -C libft
 			$(REMOVE) $(OBJS)
 			$(REMOVE) $(NAME)
 
