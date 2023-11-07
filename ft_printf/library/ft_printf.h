@@ -6,14 +6,14 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 12:46:42 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/11/07 18:03:04 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/11/07 18:03:58 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <stdarg.h>
-# include "../libft/libft.h"
+# include "libft.h"
 
 int		ft_printf(const char *string, ...);
 int		ft_arg_perc(void);
