@@ -5,7 +5,7 @@ LIBFT 		= ./libft/libft.a
 LIBFTPRINTF	= ${LIB_PATH}/ft_printf.h
 LIBS 		= -lftprintf
 
-CC 		= clang
+CC			= gcc
 
 FLAGS 		= -Wall -Werror -Wextra
 
