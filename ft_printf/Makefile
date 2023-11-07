@@ -1,20 +1,20 @@
-NAME		= libftprintf.a
+NAME 		= libftprintf.a
 
 LIB_PATH 	= ./library
 LIBFT 		= ./libft/libft.a
 LIBFTPRINTF	= ${LIB_PATH}/ft_printf.h
 LIBS 		= -lftprintf
 
-CC			= gcc
+CC 			= gcc
 
 FLAGS 		= -Wall -Werror -Wextra
 
 REMOVE 		= rm -f
 INCLUDE 	= -I ${LIB_PATH}
 
-SRCS_PATH	= ./printf
+SRCS_PATH 	= ./printf
 
-SRCS		=	$(SRCS_PATH)/ft_printf.c \
+SRCS 		= 	$(SRCS_PATH)/ft_printf.c \
 				$(SRCS_PATH)/ft_arg_c.c \
 				$(SRCS_PATH)/ft_arg_perc.c \
 				$(SRCS_PATH)/ft_arg_s.c \
@@ -27,9 +27,9 @@ SRCS		=	$(SRCS_PATH)/ft_printf.c \
 				$(SRCS_PATH)/ft_reverse_str.c \
 				$(SRCS_PATH)/ft_arg_p.c \
 
-OBJS		= $(SRCS:.c=.o)
+OBJS 		= $(SRCS:.c=.o)
 
-all:		$(NAME)
+all: 		$(NAME)
 
 $(NAME):	$(OBJS) $(LIBFT)
 			ar -rcs $(NAME) $(OBJS)
