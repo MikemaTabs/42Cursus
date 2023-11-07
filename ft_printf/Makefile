@@ -1,48 +1,58 @@
-NAME = libftprintf.a
+NAME		= libftprintf.a
 
-LIBFT = Libft/libft.a
+LIB_PATH 	= ./library
+LIBFT 		= ./libft/libft.a
+LIBFTPRINTF	= ${LIB_PATH}/ft_printf.h
+LIBS 		= -lftprintf
 
-SRCS_PATH = ./Printf
+CC 		= clang
 
-SRCS	=	$(SRCS_PATH)/ft_printf.c \
-			$(SRCS_PATH)/ft_arg_c.c \
-			$(SRCS_PATH)/ft_arg_perc.c \
-			$(SRCS_PATH)/ft_arg_s.c \
-			$(SRCS_PATH)/ft_arg_d_i.c \
-			$(SRCS_PATH)/ft_arg_u.c \
-			$(SRCS_PATH)/ft_free_ptr.c \
-			$(SRCS_PATH)/ft_hex_len.c \
-			$(SRCS_PATH)/ft_decimal_len.c \
-			$(SRCS_PATH)/ft_decimal_to_hex.c \
-			$(SRCS_PATH)/ft_reverse_str.c \
-			$(SRCS_PATH)/ft_arg_p.c \
+FLAGS 		= -Wall -Werror -Wextra
 
-OBJ = $(SRCS:.c=.o)
+REMOVE 		= rm -f
+INCLUDE 	= -I ${LIB_PATH}
 
-CC = gcc
+SRCS_PATH	= ./printf
 
-CFLAGS = -Wall -Wextra -Werror
+SRCS		=	$(SRCS_PATH)/ft_printf.c \
+				$(SRCS_PATH)/ft_arg_c.c \
+				$(SRCS_PATH)/ft_arg_perc.c \
+				$(SRCS_PATH)/ft_arg_s.c \
+				$(SRCS_PATH)/ft_arg_d_i.c \
+				$(SRCS_PATH)/ft_arg_u.c \
+				$(SRCS_PATH)/ft_free_ptr.c \
+				$(SRCS_PATH)/ft_hex_len.c \
+				$(SRCS_PATH)/ft_decimal_len.c \
+				$(SRCS_PATH)/ft_decimal_to_hex.c \
+				$(SRCS_PATH)/ft_reverse_str.c \
+				$(SRCS_PATH)/ft_arg_p.c \
 
-RM = rm -f
+OBJS		= $(SRCS:.c=.o)
 
-all: $(NAME)
+all:		$(NAME)
 
-$(NAME): $(OBJ) $(LIBFT)
-	$(CC) $(CFLAGS) -o $(OBJ) $(NAME) $(LIBFT)
-
-$(OBJ): $(SRCS)
-	$(CC) $(CFLAGS) -c $(SRCS)
+$(NAME):	$(OBJS) $(LIBFT)
+			ar -rcs $(NAME) $(OBJS)
 
 $(LIBFT):
-	make -C Libft
+			make bonus -C Libft
+			cp $(LIBFT) $(NAME)
+
+.c.o:
+			$(CC) -c ${FLAGS} $< -o ${<:.c=.o} ${INCLUDE}
 
 clean:
-	$(RM) $(OBJ) $(LIBFT)
-	make -C Libft fclean
+			make clean -C Libft
+			$(REMOVE) $(OBJS)
 
-fclean: clean
-	$(RM) $(NAME)
+fclean:
+			make fclean -C Libft
+			$(REMOVE) $(OBJS)
+			$(REMOVE) $(NAME)
 
 re: fclean all
 
-.PHONY: re all clean fclean
+norm:
+			norminette
+
+.PHONY: re all clean fclean norm
