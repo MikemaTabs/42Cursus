@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 12:57:16 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/11/08 16:01:00 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:19:15 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_arg_p(unsigned long address)
 
 	i = 0;
 	if (!address)
-		return (write(1, "(null)", sizeof(char) * 6));
+		return (write(1, "0x0", sizeof(char) * 3));
 	bytes = write(1, "0x", sizeof(char) * 2);
 	num = (char *)malloc(((ft_hex_len(address)) + 1) * sizeof(char));
 	while (address)
