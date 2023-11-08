@@ -26,6 +26,7 @@ SRCS 		= 	$(SRCS_PATH)/ft_printf.c \
 				$(SRCS_PATH)/ft_decimal_to_hex.c \
 				$(SRCS_PATH)/ft_reverse_str.c \
 				$(SRCS_PATH)/ft_arg_p.c \
+				$(SRCS_PATH)/ft_arg_x.c \
 
 OBJS 		= $(SRCS:.c=.o)
 
