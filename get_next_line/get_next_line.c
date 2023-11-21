@@ -6,7 +6,8 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 16:47:53 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/11/17 16:47:54 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/11/21 17:10:32 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+char	*get_next_line(int	fd)
