@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 16:47:53 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/11/29 13:41:16 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/11/29 13:51:00 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ char	*get_next_line(int fd)
 		backup = NULL;
 		return (0);
 	}
-	backup = ft_extract_line(line);
+	backup = ft_extract_bytes_after_newline(line);
 	return (line);
 }
 /*
