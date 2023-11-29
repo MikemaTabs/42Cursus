@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 16:47:53 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/11/27 18:20:12 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/11/29 13:41:16 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static char	*ft_cpyfile_to_backup(int fd, char *buf, char *backup)
 	return (backup);
 }
 
-static char	*ft_extract_line(char *line)
+static char	*ft_extract_bytes_after_newline(char *line)
 {
 	size_t	count;
 	char	*backup;
