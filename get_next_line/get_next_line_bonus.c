@@ -6,7 +6,7 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 18:16:23 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/12/01 18:24:30 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/12/04 13:02:23 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ char	*ft_strdup(const char *s1)
 	return ((char *) s2);
 }
 
-static char	*ft_cpyfile_to_backup(int fd, char *buf, char *backup)
+static char	*copyfile_to_backup(int fd, char *buf, char *backup)
 {
 	int		read_line;
-	char	*temp;
+	char	*char_temp;
 
 	read_line = 1;
 	while (read_line != '\0')
@@ -41,10 +41,10 @@ static char	*ft_cpyfile_to_backup(int fd, char *buf, char *backup)
 		buf[read_line] = '\0';
 		if (!backup)
 			backup = ft_strdup("");
-		temp = backup;
-		backup = ft_strjoin(temp, buf);
-		free(temp);
-		temp = NULL;
+		char_temp = backup;
+		backup = ft_strjoin(char_temp, buf);
+		free(char_temp);
+		char_temp = NULL;
 		if (ft_strchr (buf, '\n') && ft_strchr (buf, '\0'))
 			break ;
 		else if (ft_strchr (buf, '\n'))
@@ -53,7 +53,7 @@ static char	*ft_cpyfile_to_backup(int fd, char *buf, char *backup)
 	return (backup);
 }
 
-static char	*ft_extract_bytes_after_newline(char *line)
+static char	*extract_substr_after_nl(char *line)
 {
 	size_t	count;
 	char	*backup;
@@ -79,17 +79,21 @@ char	*get_next_line(int fd)
 {
 	char		*line;
 	char		*buf;
-	static char	*backup[BUFFER_SIZE];
+	static char	*backup[1024];
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
 	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buf)
 		return (0);
-	line = ft_cpyfile_to_backup(fd, buf, backup[fd]);
+	line = copyfile_to_backup(fd, buf, backup[fd]);
 	free(buf);
 	if (!line)
-		return (free(backup[fd]), backup[fd] = NULL, NULL);
-	backup[fd] = ft_extract_bytes_after_newline(line);
+	{
+		free(backup[fd]);
+		backup[fd] = NULL;
+		return (NULL);
+	}
+	backup[fd] = extract_substr_after_nl(line);
 	return (line);
 }
