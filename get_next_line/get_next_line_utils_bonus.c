@@ -6,11 +6,11 @@
 /*   By: fbascuna <fbascuna@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:00:01 by fbascuna          #+#    #+#             */
-/*   Updated: 2023/11/29 14:00:03 by fbascuna         ###   ########.fr       */
+/*   Updated: 2023/12/07 19:21:25 by fbascuna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
