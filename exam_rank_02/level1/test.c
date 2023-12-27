@@ -8,4 +8,3 @@ void	ft_putchar_n(char c, int i)
 		--i;
 	}
 }
-
